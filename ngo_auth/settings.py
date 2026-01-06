@@ -27,8 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     "ngo-auth.onrender.com",
+    ".onrender.com",
     "localhost",
-    "127.0.0.1"
+    "127.0.0.1",
 ]
 
 

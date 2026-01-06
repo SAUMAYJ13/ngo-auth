@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{% static 'accounts/style.css' %}">
+</head>
+<body>
+
+<div class="header">
+    NGO Authentication System
+</div>
+
+<div class="container">
+    <h2>Dashboard</h2>
+
+    <p>Welcome <strong>{{ request.user.username }}</strong></p>
+    <p>Role: <strong>{{ role|title }}</strong></p>
+
+    {% if role == "admin" %}
+        <p>You have Admin access.</p>
+    {% else %}
+        <p>You have User access.</p>
+    {% endif %}
+
+    <a href="/logout/">Logout</a>
+</div>
+
+
+
+</body>
+</html>

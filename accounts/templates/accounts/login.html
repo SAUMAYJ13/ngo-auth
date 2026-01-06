@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Login</title>
+    <link rel="stylesheet" href="{% static 'accounts/style.css' %}">
+</head>
+<body>
+
+<div class="header">
+    NGO Authentication System
+</div>
+
+<div class="container">
+    <h2>Login</h2>
+
+    <form method="post">
+        {% csrf_token %}
+
+        <input type="text" name="username" placeholder="Username" required>
+
+        <input type="password" name="password" placeholder="Password" required>
+
+        <button type="submit">Login</button>
+    </form>
+
+    <p>
+        <a href="/password-reset/">Forgot password?</a>
+    </p>
+
+    <p>
+        New user?
+        <a href="/register/">Register here</a>
+    </p>
+</div>
+
+
+
+</body>
+</html>

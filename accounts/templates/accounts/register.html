@@ -1,11 +1,6 @@
+{% extends "base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html>
-<head>
-    <title>User Registration</title>
-    <link rel="stylesheet" href="{% static 'accounts/style.css' %}">
-</head>
-<body>
+{% block content %}
 
 <div class="header">
     NGO Authentication System
@@ -36,6 +31,8 @@
         <a href="/">Login</a>
     </p>
 </div>
+{% endblock %}
+
 
 
 </body>

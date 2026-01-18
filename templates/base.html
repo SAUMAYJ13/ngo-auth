@@ -1,11 +1,16 @@
-{% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="en">
+{% load static %}
 <head>
-    <title>NGO Authentication System</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta charset="UTF-8">
+    <title>{% block title %}NGO Auth{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'accounts/style.css' %}">
 </head>
 <body>
+
+<div class="header">
+    NGO Authentication System
+</div>
 
 <div class="container">
     {% block content %}

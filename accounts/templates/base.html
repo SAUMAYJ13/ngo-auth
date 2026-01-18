@@ -1,29 +1,29 @@
 {% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>{% block title %}NGO Auth{% endblock %}</title>
+
     <link rel="stylesheet" href="{% static 'accounts/style.css' %}">
 </head>
 <body>
 
-<div class="header">
-    NGO Authentication System
-</div>
-
-<div class="container">
-
-    <!-- 🔔 ALERT MESSAGES -->
+    <!-- Flash messages (success / error alerts) -->
     {% if messages %}
-        {% for message in messages %}
-            <div class="alert alert-{{ message.tags }}">
-                {{ message }}
-            </div>
-        {% endfor %}
+        <div class="alert-container">
+            {% for message in messages %}
+                <div class="alert {{ message.tags }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        </div>
     {% endif %}
 
-    {% block content %}{% endblock %}
-</div>
+    <!-- Main page content -->
+    <div class="page-wrapper">
+        {% block content %}{% endblock %}
+    </div>
 
 </body>
 </html>

@@ -1,28 +1,9 @@
 {% extends "base.html" %}
-{% load static %}
+
 {% block content %}
+<h2>Dashboard</h2>
 
-<div class="header">
-    NGO Authentication System
-</div>
+<p>Welcome, {{ request.user.username }}</p>
 
-<div class="container">
-    <h2>Dashboard</h2>
-
-    <p>Welcome <strong>{{ request.user.username }}</strong></p>
-    <p>Role: <strong>{{ role|title }}</strong></p>
-
-    {% if role == "admin" %}
-        <p>You have Admin access.</p>
-    {% else %}
-        <p>You have User access.</p>
-    {% endif %}
-
-    <a href="/logout/">Logout</a>
-</div>
+<p>You are logged in successfully.</p>
 {% endblock %}
-
-
-
-</body>
-</html>
